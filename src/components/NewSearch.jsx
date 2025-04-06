@@ -1,4 +1,4 @@
-const Search = ({ searchTerm, setSearchTerm }) => {
+const NewSearch = ({ searchTerm, setSearchTerm }) => {
   return (
     <div className="search">
       <div>
@@ -14,4 +14,4 @@ const Search = ({ searchTerm, setSearchTerm }) => {
     </div>
   );
 };
-export default Search;
+export default NewSearch;

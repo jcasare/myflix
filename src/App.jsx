@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import Search from './components/search';
 import { Loader } from './components/Loader';
 import MovieCard from './components/MovieCard';
 import { useDebounce } from 'react-use';
 import { getTrendingMovies, updateSearchCount } from './appwrite';
+import NewSearch from './components/NewSearch';
 const API_BASE_URL = 'https://api.themoviedb.org/3';
 const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
 const API_OPTIONS = {
@@ -82,7 +82,7 @@ const App = () => {
             Find <span className="text-gradient"> Movies and TV </span>Shows
             You'll Enjoy
           </h1>
-          <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+          <NewSearch searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
         </header>
         {trendingMovies.length > 0 && (
           <section className="trending">
